@@ -11,7 +11,8 @@ A simple flutter application which demonstrates how to manage a list of books to
 - Display book title, author and cover image.
 - Lazy load widgets in the list.
 - Query only needed fields from the API.
-- Stores favorite books in Firebase Firestore.
+- Tapping on books stores them as favorite in Firebase Firestore. Tapping again removes them from favorites.
+- Logs HTTP communication to the console.
 
 
 ## TODO list:
@@ -20,6 +21,10 @@ A simple flutter application which demonstrates how to manage a list of books to
 - Add unit & widget tests.
 - Add error handling with fancy UI to fail gracefully.
 - Investigate if API exposes a query parameter to fetch books by their IDs, this would allow to avoid storing whole book object on Firestore, instead we could store only IDs of favorite books and fetch them from the API instead.
+
+## How to run the project:
+- Install fvm https://fvm.app/
+- Execute `fvm flutter pub get & fvm flutter run` or if you're already on newest stable flutter version execute `flutter pub get & flutter run`.
 
 # 1. Useful commands list
 
