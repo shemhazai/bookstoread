@@ -20,7 +20,10 @@ class BooksRepositoryImpl implements BooksRepository {
   @override
   Future<Paged<Book>> searchBooks(String query) async {
     try {
-      return await _api.getBooks(query);
+      return await _api.getBooks(
+        query: query,
+        fields: Book.fields.join(','),
+      );
     } on DioException catch (error, stackTrace) {
       _logger.logError(error, stackTrace);
 

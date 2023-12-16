@@ -1,0 +1,18 @@
+{
+   "common": {
+      "appName": "Books to read"
+   },
+   "page": {
+      "home": {
+         "home": "Home",
+         "favorites": "Favorites"
+      },
+      "allBooks": {
+         "title": "Your books",
+         "search": "Search...",
+         "results": "RESULTS",
+         "noResults": "No results",
+         "error": "Error: {}"
+      }
+   }
+}

@@ -10,5 +10,8 @@ abstract class BooksApi {
   factory BooksApi(Dio dio) = _BooksApi;
 
   @GET('/search.json')
-  Future<Paged<Book>> getBooks(@Query('q') String query);
+  Future<Paged<Book>> getBooks({
+    @Query('q') required String query,
+    @Query('fields') required String fields,
+  });
 }

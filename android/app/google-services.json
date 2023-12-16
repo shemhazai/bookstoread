@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1015047259649",
+    "project_id": "books-to-read-fb642",
+    "storage_bucket": "books-to-read-fb642.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015047259649:android:836247dfa6647da6c2a200",
+        "android_client_info": {
+          "package_name": "com.example.books_to_read"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmF2Y2vJkNwTiAfp9holFpom1q7QmWjQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

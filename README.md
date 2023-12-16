@@ -1,10 +1,10 @@
-# navigation
+# Books to read.
 
 A simple flutter application which demonstrates how to manage a list of books to read.
 
 # 1. Useful commands list
 
-Generate code (get_it, auto_route, etc.):
+Generate code:
 ```
 dart run build_runner build --delete-conflicting-outputs
 ```
@@ -97,10 +97,7 @@ return Image.asset(
 - For simple widgets that a single setState() would be sufficient just use setState() and avoid using the cubit.
 - E.g. UI components such as buttons/labels/etc. must not use cubits, instead they shall offer callbacks to communicate with a parent widget (typically a page) and the page should call the cubit.
 
-# 7. Navigation
-- [auto_route](https://pub.dev/packages/auto_route) is used to handle navigation in the app.
-
-# 8. Theming
+# 7. Theming
 - app/common/theming contains all files related to the theming (themes, colors, dimensions). 
 - Prefer styling the widget through related properties in the ThemeData rather than copy-pasting the styles for every instance of the widget.
 - Do not hardcode colors. When adding new colors give them a descriptive name related to the function of the color. E.g.:
@@ -108,15 +105,14 @@ return Image.asset(
 static const Color errorColor = Color(0xFF0000); // wrong name: redColor.
 ```
 
-# 9. Analyzer
+# 8. Analyzer
 - Before submitting a new pull request run `flutter analyze` and make sure there are no linter issues in your code.
 
-# 10. Code structure
+# 9. Code structure
 - **app** *// things related to UI/presentation*
   - **common** *// commonly used things by the presentation module (theming, bloc, formatters)*
   - **di** *// dependency injection*
   - **pages** *// put your screens here*
-  - **router** *// auto_route router configuration*
   - **widgets** *// reusable widgets*
 - **common** *// commonly used things in the whole project, do not relate directly either to presentation nor model*
   - **extensions** *// reusable, universal utils (neither model nor app)*
@@ -125,7 +121,7 @@ static const Color errorColor = Color(0xFF0000); // wrong name: redColor.
   - **{feature}/repository** */ abstraction & implementation for the data source*
     - **api** *// retrofit or any other API*
 
-# 11. General principles
+# 10. General principles
 - Follow the [clean architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 - Follow the [SOLID principles](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 - Don't Repeat Yourself (DRY) - do not copy-paste code, instead be smart and think how to extract common logic

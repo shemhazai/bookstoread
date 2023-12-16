@@ -1,0 +1,18 @@
+{
+   "common": {
+      "appName": "Bücher zum Lesen"
+   },
+   "page": {
+      "home": {
+         "home": "Home",
+         "favorites": "Favoriten"
+      },
+      "allBooks": {
+         "title": "Deine Bücher",
+         "search": "Suchen...",
+         "results": "ERGEBNISSE",
+         "noResults": "Keine Ergebnisse",
+         "error": "Fehler: {}"
+      }
+   }
+}
