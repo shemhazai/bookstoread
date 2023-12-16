@@ -9,12 +9,14 @@ typedef BookCoverBuilder = String Function(int coverId);
 /// A widget that renders a card for a book.
 class BookWidget extends StatelessWidget {
   final Book book;
+  final bool isFavorite;
   final BookCoverBuilder coverBuilder;
   final VoidCallback? onPressed;
 
   const BookWidget({
     super.key,
     required this.book,
+    required this.isFavorite,
     required this.coverBuilder,
     required this.onPressed,
   });
@@ -70,6 +72,17 @@ class BookWidget extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],
+                ),
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 12, right: 12),
+                  child: Icon(
+                    isFavorite ? Icons.star : Icons.star_outline,
+                    color: Colors.amber,
+                    size: 32,
+                  ),
                 ),
               ),
             ],

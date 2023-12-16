@@ -19,17 +19,20 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: TabBar(
-          tabs: [
-            Tab(
-              icon: const Icon(Icons.home),
-              text: LocaleKeys.page_home_home.tr(),
-            ),
-            Tab(
-              icon: const Icon(Icons.star),
-              text: LocaleKeys.page_home_favorites.tr(),
-            ),
-          ],
+        bottomNavigationBar: ColoredBox(
+          color: Colors.grey[200]!,
+          child: TabBar(
+            tabs: [
+              Tab(
+                icon: const Icon(Icons.home),
+                text: LocaleKeys.page_home_home.tr(),
+              ),
+              Tab(
+                icon: const Icon(Icons.star),
+                text: LocaleKeys.page_home_favorites.tr(),
+              ),
+            ],
+          ),
         ),
       ),
     );

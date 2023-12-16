@@ -45,7 +45,10 @@ class _Body extends StatelessWidget {
                 loading: () => const _Loading(),
                 noResults: () => const _NoResults(),
                 error: (error) => _Error(error: error),
-                content: (books) => _Content(books: books),
+                content: (books, favoriteBooks) => _Content(
+                  books: books,
+                  favoriteBooks: favoriteBooks,
+                ),
               ),
             );
           },
@@ -161,8 +164,12 @@ class _Error extends StatelessWidget {
 
 class _Content extends StatelessWidget {
   final List<Book> books;
+  final List<Book> favoriteBooks;
 
-  const _Content({required this.books});
+  const _Content({
+    required this.books,
+    required this.favoriteBooks,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -185,13 +192,20 @@ class _Content extends StatelessWidget {
             itemCount: books.length,
             itemBuilder: (BuildContext context, int index) {
               final Book book = books[index];
+              final bool isFavorite = favoriteBooks.any((e) => e.key == book.key);
               return BookWidget(
                 book: book,
+                isFavorite: isFavorite,
                 coverBuilder: repository.buildCoverUrl,
                 onPressed: () {
                   FocusScope.of(context).unfocus();
 
-                  // TODO: make favorite
+                  final cubit = context.read<AllBooksCubit>();
+                  if (isFavorite) {
+                    cubit.removeFavoriteBook(book);
+                  } else {
+                    cubit.saveFavoriteBook(book);
+                  }
                 },
               );
             },

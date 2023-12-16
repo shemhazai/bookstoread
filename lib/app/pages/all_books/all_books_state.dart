@@ -5,9 +5,12 @@ part 'all_books_state.freezed.dart';
 
 @freezed
 class AllBooksState with _$AllBooksState {
-  const factory AllBooksState.loading() = _Loading;
-  const factory AllBooksState.empty() = _Empty;
-  const factory AllBooksState.noResults() = _NoResults;
-  const factory AllBooksState.content({required List<Book> books}) = _Content;
-  const factory AllBooksState.error(Object error) = _Error;
+  const factory AllBooksState.loading() = AllBooksStateLoading;
+  const factory AllBooksState.empty() = AllBooksStateEmpty;
+  const factory AllBooksState.noResults() = AllBooksStateNoResults;
+  const factory AllBooksState.content({
+    required List<Book> books,
+    required List<Book> favoriteBooks,
+  }) = AllBooksStateContent;
+  const factory AllBooksState.error(Object error) = AllBooksStateError;
 }

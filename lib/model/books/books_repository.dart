@@ -10,6 +10,15 @@ abstract class BooksRepository {
   /// Throws [BookSearchUnknownException] if there is an unknown failure.
   Future<Paged<Book>> searchBooks(String query);
 
+  /// Loads previously favorited books.
+  Future<List<Book>> getFavoriteBooks();
+
+  /// Adds a new favorite book.
+  Future<void> saveFavoriteBook(Book book);
+
+  /// Removes a favorite book.
+  Future<void> removeFavoriteBook(Book book);
+
   /// Builds a url to fetch a network image representing a cover of the book with [coverId].
   String buildCoverUrl(int coverId);
 }
