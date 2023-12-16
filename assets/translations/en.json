@@ -13,6 +13,11 @@
          "results": "RESULTS",
          "noResults": "No results",
          "error": "Error: {}"
+      },
+      "favoriteBooks": {
+         "title": "Favorite books",
+         "results": "RESULTS",
+         "error": "Error: {}"
       }
    }
 }

@@ -1,4 +1,5 @@
 import 'package:books_to_read/app/pages/all_books/all_books_page.dart';
+import 'package:books_to_read/app/pages/favorite_books/favorite_books_page.dart';
 import 'package:books_to_read/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -11,12 +12,10 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        body: TabBarView(
+        body: const TabBarView(
           children: [
-            const AllBooksPage(),
-            Container(
-              color: Colors.blue,
-            ),
+            AllBooksPage(),
+            FavoriteBooksPage(),
           ],
         ),
         bottomNavigationBar: ColoredBox(

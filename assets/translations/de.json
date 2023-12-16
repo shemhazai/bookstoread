@@ -13,6 +13,11 @@
          "results": "ERGEBNISSE",
          "noResults": "Keine Ergebnisse",
          "error": "Fehler: {}"
+      },
+      "favoriteBooks": {
+         "title": "Lieblingsbücher",
+         "results": "ERGEBNISSE",
+         "error": "Fehler: {}"
       }
    }
 }
