@@ -4,14 +4,22 @@ A simple flutter application which demonstrates how to manage a list of books to
 
 ## Demonstration of the app.
 
-[Demo](/demo/demo.mp4).
-<img src="/demo/screenshot_1.png" width="320">
+[![Demonstration](https://img.youtube.com/vi/qckA-pyA7OQ/0.jpg)](https://www.youtube.com/watch?v=qckA-pyA7OQ).
+
+## Features:
+- Search books by query.
+- Display book title, author and cover image.
+- Lazy load widgets in the list.
+- Query only needed fields from the API.
+- Stores favorite books in Firebase Firestore.
+
 
 ## TODO list:
 - Implement pagination for search queries to avoid fetching all items.
 - Debounce search queries to avoid spamming server on every keystroke.
 - Add unit & widget tests.
 - Add error handling with fancy UI to fail gracefully.
+- Investigate if API exposes a query parameter to fetch books by their IDs, this would allow to avoid storing whole book object on Firestore, instead we could store only IDs of favorite books and fetch them from the API instead.
 
 # 1. Useful commands list
 
