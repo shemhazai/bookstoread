@@ -24,6 +24,8 @@ A simple flutter application which demonstrates how to manage a list of books to
 
 ## How to run the project:
 - Install fvm https://fvm.app/
+- Execute `fvm dart run build_runner build --delete-conflicting-outputs`
+- Execute `fvm dart run easy_localization:generate -f keys -o locale_keys.g.dart -S assets/translations`
 - Execute `fvm flutter pub get & fvm flutter run` or if you're already on newest stable flutter version execute `flutter pub get & flutter run`.
 
 # 1. Useful commands list
